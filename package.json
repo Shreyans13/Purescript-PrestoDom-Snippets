@@ -1,0 +1,42 @@
+{
+    "name": "prestodom-snippets",
+    "displayName": "PrestoDom Snippets",
+    "description": "Code Snippets for PrestDom in PureScript Syntax",
+    "publisher": "ias-vscode-ext",
+    "version": "0.0.1",
+    "author": {
+        "name": "Arth K. Gajjar",
+        "email": "iarthstar@gmail.com",
+        "url": "https://github.com/iarthstar"
+    },
+    "keywords": [
+        "vscode",
+        "extension",
+        "purescript",
+        "snippet",
+        "presto",
+        "presto-dom",
+        "prestoDom",
+        "javascript"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/iarthstar/vscode-ext-presto-dom.git"
+    },
+    "license": "MIT",
+    "private": false,
+    "engines": {
+        "vscode": "^1.35.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "purescript",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    }
+}

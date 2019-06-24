@@ -1,0 +1,101 @@
+{
+	"LinearLayout": {
+		"prefix": "ll",
+		"body": [
+			"linearLayout",
+			"\t[ height ${1|$ V 0,MATCH_PARENT|}",
+			"\t, width ${2|$ V 0,MATCH_PARENT|}",
+			"\t, orientation ${3|VERTICAL,HORIZONTAL|}",
+			"\t, margin $ Margin ${4:0 0 0 0}",
+			"\t, padding $ Padding ${5:0 0 0 0}",
+			"\t, background \"#${6:FFFFFF}\"",
+			"\t, cornerRadius ${7:0.0}",
+			"\t, gravity ${8|CENTER,CENTER_VERTICAL,CENTER_HORIZONTAL|}",
+			"\t]",
+			"\t[ ${9:}",
+			"\t]"
+		],
+		"description": "LinearLayout PrestDom"
+	},
+	"RelativeLayout": {
+		"prefix": "rl",
+		"body": [
+			"relativeLayout",
+			"\t[ height ${1:$ V 0}",
+			"\t, width ${2:$ V 0}",
+			"\t, background \"#${6:FFFFFF}\"",
+			"\t, cornerRadius ${7:0.0}",
+			"\t]",
+			"\t[ ${8:}",
+			"\t]"
+		],
+		"description": "RelativeLayout PrestDom"
+	},
+	"Weight-LinearLayout-Vertical": {
+		"prefix": "linVW",
+		"body": [
+			"linearLayout",
+			"\t[ height $ V 1",
+			"\t, width MATCH_PARENT",
+			"\t, weight \"1\"",
+			"\t] []"
+		],
+		"description": "Weight-LinearLayout-VERTICAL PrestDom"
+	},
+	"Weight-LinearLayout-Horizontal": {
+		"prefix": "linHW",
+		"body": [
+			"linearLayout",
+			"\t[ height MATCH_PARENT",
+			"\t, width $ V 1",
+			"\t, weight \"1\"",
+			"\t] []"
+		],
+		"description": "Weight-LinearLayout-HORIZONTAL PrestDom"
+	},
+	"TextView": {
+        "prefix": "tv",
+        "body": [
+			"textView",
+			"\t[ height ${1:$ V 0}",
+			"\t, width ${2:$ V 0}",
+			"\t, text \"${3:Hello World}\"",
+			"\t, letterSpacing ${4:0.0}",
+			"\t, color \"#${5:000000}\"",
+			"\t, textSize ${6:12}",
+			"\t, fontStyle \"${7:Roboto-Regular}\"",
+			"\t, singleLine ${8:false}",
+			"\t]"
+		],
+		"description": "TextView PrestDom"
+	},
+	"EditText": {
+        "prefix": "et",
+        "body": [
+			"editText",
+			"\t[ height ${1:$ V 0}",
+			"\t, width ${2:$ V 0}",
+			"\t, hint \"${3:Hello World}\"",
+			"\t, hintColor \"#${4:000000}\"",
+			"\t, color \"#${5:000000}\"",
+			"\t, letterSpacing ${6:0.0}",
+			"\t, textSize ${7:12}",
+			"\t, fontStyle \"${8:Roboto-Regular}\"",
+			"\t, singleLine ${9:true}",
+			"\t, padding $ Padding 0 0 0 0",
+			"\t]"
+		],
+		"description": "EditText PrestDom"
+	},
+	"ImageView": {
+		"prefix": "iv",
+		"body": [
+			"imageView",
+			"\t[ height ${1:$ V 0}",
+			"\t, width ${2:$ V 0}",
+			"\t, imageUrl \"${3:ic_}\"",
+			"\t]"
+		],
+		"description": "ImageView PrestDom"
+	}
+}
