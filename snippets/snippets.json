@@ -126,5 +126,15 @@
 			"_$0 = lens (unwrap >>> _.$0) (\\oldRec newVal -> wrap ((unwrap oldRec) { $0 = newVal }))"
 		],
 		"description": "Accessor Lenses"
+	},
+	"Derive-Instance": {
+		"prefix": "_di",
+		"body": [
+			"derive instance newtype$0 :: Newtype $0 _",
+			"derive instance generic$0 :: Generic $0 _",
+			"instance encode$0 :: Encode $0 where encode = defaultEncode",
+			"instance decode$0 :: Decode $0 where decode = defaultDecode"
+		],
+		"description": "Derive Instance"
 	}
 }

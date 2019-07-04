@@ -29,6 +29,13 @@ Type part of a snippet, press `enter`, and the snippet unfolds.
 | `_mg`                | margin                                             |
 | `_pd`                | padding                                            |
 
+### Misc Snippets
+
+| Snippet              | Purpose                                            |
+| -------------------- | -------------------------------------------------- |
+| `_acc`               | accessor                                           |
+| `_di`                | derive instance                                    |
+
 ## Installation
 
 1. Install Visual Studio Code 1.35.1 or higher
