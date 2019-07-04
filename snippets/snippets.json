@@ -118,5 +118,13 @@
 			"padding $ Padding ${1:left} ${2:top} ${3:right} ${4:bottom}"
 		],
 		"description": "Padding Prop PrestDom"
+	},
+	"Accessor": {
+		"prefix": "_acc",
+		"body": [
+			"_$0 :: forall a b c. Newtype a { $0 :: b | c } => Lens' a b",
+			"_$0 = lens (unwrap >>> _.$0) (\\oldRec newVal -> wrap ((unwrap oldRec) { $0 = newVal }))"
+		],
+		"description": "Accessor Lenses"
 	}
 }
