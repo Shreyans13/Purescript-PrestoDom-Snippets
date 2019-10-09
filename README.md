@@ -1,4 +1,4 @@
-# PrestoDom Snippets
+# PrestoDom Snippets &nbsp; ![Downloads](https://img.shields.io/visual-studio-marketplace/d/ias-vscode-ext.prestodom-snippets?style=social)
 
 Code Snippets for PrestDom in PureScript Syntax
 
