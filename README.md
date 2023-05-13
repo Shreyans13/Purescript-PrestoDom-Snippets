@@ -1,8 +1,10 @@
-# PrestoDom Snippets &nbsp; ![Downloads](https://img.shields.io/visual-studio-marketplace/d/ias-vscode-ext.prestodom-snippets?style=social)
+# Purescript PrestoDom Snippets &nbsp; 
+
+<!-- ![Downloads](https://img.shields.io/visual-studio-marketplace/d/ias-vscode-ext.prestodom-snippets?style=social) -->
 
 Code Snippets for PrestDom in PureScript Syntax
 
-![Use Extension](assets/PrestoDom-Typing.gif)
+<img src="assets/PrestoDom.gif" width="800" />
 
 ## Usage
 
@@ -14,20 +16,21 @@ Type part of a snippet, press `enter`, and the snippet unfolds.
 | -------------------- | -------------------------------------------------- |
 | `_ll`                | linearLayout                                       |
 | `_rl`                | relativeLayout                                     |
+| `_llHW`              | linearLayout with weight "1" and width $ V 1       |
+| `_llVW`              | linearLayout with weight "1" and height $ V 1      |
 | `_tv`                | textView                                           |
 | `_et`                | editText                                           |
 | `_iv`                | imageView                                          |
-| `_llHW`              | linearLayout with weight "1" and width $ V 1       |
-| `_llVW`              | linearLayout with weight "1" and height $ V 1      |
 
 
 ### Prop Snippets
 
 | Snippet              | Purpose                                            |
 | -------------------- | -------------------------------------------------- |
-| `_sh`                | shadow                                             |
-| `_mg`                | margin                                             |
-| `_pd`                | padding                                            |
+| `_cr`                | CornerRadii                                        |
+| `_sh`                | Shadow                                             |
+| `_mg`                | Margin                                             |
+| `_pd`                | Padding                                            |
 
 ### Misc Snippets
 
@@ -42,5 +45,5 @@ Type part of a snippet, press `enter`, and the snippet unfolds.
 2. Launch Code
 3. From the command palette `Ctrl`-`Shift`-`P` (Windows, Linux) or `Cmd`-`Shift`-`P` (OSX)
 4. Type and Select `Install Extension`
-5. Search `PrestoDom Snippets` and click install
+5. Search `Purescript PrestoDom Snippets` and click install
 6. Done

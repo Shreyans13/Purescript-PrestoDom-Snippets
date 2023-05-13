@@ -3,14 +3,14 @@
 		"prefix": "_ll",
 		"body": [
 			"linearLayout",
-			"\t[ height ${1|$ V 0,MATCH_PARENT|}",
-			"\t, width ${2|$ V 0,MATCH_PARENT|}",
+			"\t[ height ${1|$ V 0,MATCH_PARENT,WRAP_CONTENT|}",
+			"\t, width ${2|$ V 0,MATCH_PARENT,WRAP_CONTENT|}",
 			"\t, orientation ${3|VERTICAL,HORIZONTAL|}",
 			"\t, margin $ Margin ${4:0 0 0 0}",
 			"\t, padding $ Padding ${5:0 0 0 0}",
 			"\t, background \"#${6:FFFFFF}\"",
-			"\t, cornerRadius ${7:0.0}",
-			"\t, gravity ${8|CENTER,CENTER_VERTICAL,CENTER_HORIZONTAL|}",
+			"\t, cornerRadii $ Corners ${7:0.0} ${8|true,false|}  ${9|true,false|}  ${10|true,false|}  ${11|true,false|}",
+			"\t, gravity ${8|CENTER,CENTER_VERTICAL,CENTER_HORIZONTAL,LEFT,RIGHT|}",
 			"\t]",
 			"\t[ ",
 			"\t]"
@@ -24,7 +24,8 @@
 			"\t[ height ${1|$ V 0,MATCH_PARENT|}",
 			"\t, width ${2|$ V 0,MATCH_PARENT|}",
 			"\t, background \"#${3:FFFFFF}\"",
-			"\t, cornerRadius ${4:0.0}",
+			"\t, cornerRadii $ Corners ${7:0.0} ${8|true,false|}  ${9|true,false|}  ${10|true,false|}  ${11|true,false|}",
+			"\t, gravity ${8|CENTER,CENTER_VERTICAL,CENTER_HORIZONTAL,LEFT,RIGHT|}",
 			"\t]",
 			"\t[ ",
 			"\t]"
@@ -97,6 +98,13 @@
 			"\t]"
 		],
 		"description": "ImageView PrestDom"
+	},
+	"CornerRadii" : {
+		"prefix": "_cr",
+		"body": [
+			"cornerRadii $ Corners ${7:0.0} ${8|true,false|}  ${9|true,false|}  ${10|true,false|}  ${11|true,false|}",
+		],
+		"description": "Corner Radii Prop PrestDom"
 	},
 	"Shadow": {
 		"prefix": "_sh",
