@@ -1,148 +1,287 @@
 {
-	"LinearLayout": {
-		"prefix": "_ll",
-		"body": [
-			"linearLayout",
-			"\t[ height ${1|$ V 0,MATCH_PARENT,WRAP_CONTENT|}",
-			"\t, width ${2|$ V 0,MATCH_PARENT,WRAP_CONTENT|}",
-			"\t, orientation ${3|VERTICAL,HORIZONTAL|}",
-			"\t, margin $ Margin ${4:0 0 0 0}",
-			"\t, padding $ Padding ${5:0 0 0 0}",
-			"\t, background \"#${6:FFFFFF}\"",
-			"\t, cornerRadii $ Corners ${7:0.0} ${8|true,false|}  ${9|true,false|}  ${10|true,false|}  ${11|true,false|}",
-			"\t, gravity ${8|CENTER,CENTER_VERTICAL,CENTER_HORIZONTAL,LEFT,RIGHT|}",
-			"\t]",
-			"\t[ ",
-			"\t]"
-		],
-		"description": "LinearLayout PrestDom"
-	},
-	"RelativeLayout": {
-		"prefix": "_rl",
-		"body": [
-			"relativeLayout",
-			"\t[ height ${1|$ V 0,MATCH_PARENT|}",
-			"\t, width ${2|$ V 0,MATCH_PARENT|}",
-			"\t, background \"#${3:FFFFFF}\"",
-			"\t, cornerRadii $ Corners ${7:0.0} ${8|true,false|}  ${9|true,false|}  ${10|true,false|}  ${11|true,false|}",
-			"\t, gravity ${8|CENTER,CENTER_VERTICAL,CENTER_HORIZONTAL,LEFT,RIGHT|}",
-			"\t]",
-			"\t[ ",
-			"\t]"
-		],
-		"description": "RelativeLayout PrestDom"
-	},
-	"Weight-LinearLayout-Vertical": {
-		"prefix": "_llVW",
-		"body": [
-			"linearLayout",
-			"\t[ height $ V 1",
-			"\t, width MATCH_PARENT",
-			"\t, weight \"1\"",
-			"\t] []"
-		],
-		"description": "Weight-LinearLayout-VERTICAL PrestDom"
-	},
-	"Weight-LinearLayout-Horizontal": {
-		"prefix": "_llHW",
-		"body": [
-			"linearLayout",
-			"\t[ height MATCH_PARENT",
-			"\t, width $ V 1",
-			"\t, weight \"1\"",
-			"\t] []"
-		],
-		"description": "Weight-LinearLayout-HORIZONTAL PrestDom"
-	},
-	"TextView": {
-        "prefix": "_tv",
-        "body": [
-			"textView",
-			"\t[ height ${1:$ V 0}",
-			"\t, width ${2:$ V 0}",
-			"\t, text \"${3:Hello World}\"",
-			"\t, letterSpacing ${4:0.0}",
-			"\t, color \"#${5:000000}\"",
-			"\t, textSize ${6:12}",
-			"\t, fontStyle \"${7:Roboto-Regular}\"",
-			"\t, singleLine ${8:false}",
-			"\t]"
-		],
-		"description": "TextView PrestDom"
-	},
-	"EditText": {
-        "prefix": "_et",
-        "body": [
-			"editText",
-			"\t[ height ${1:$ V 0}",
-			"\t, width ${2:$ V 0}",
-			"\t, hint \"${3:Hello World}\"",
-			"\t, hintColor \"#${4:000000}\"",
-			"\t, color \"#${5:000000}\"",
-			"\t, letterSpacing ${6:0.0}",
-			"\t, textSize ${7:12}",
-			"\t, fontStyle \"${8:Roboto-Regular}\"",
-			"\t, singleLine ${9:true}",
-			"\t, padding $ Padding 0 0 0 0",
-			"\t]"
-		],
-		"description": "EditText PrestDom"
-	},
-	"ImageView": {
-		"prefix": "_iv",
-		"body": [
-			"imageView",
-			"\t[ height ${1:$ V 0}",
-			"\t, width ${2:$ V 0}",
-			"\t, imageUrl \"${3:ic_}\"",
-			"\t]"
-		],
-		"description": "ImageView PrestDom"
-	},
-	"CornerRadii" : {
-		"prefix": "_cr",
-		"body": [
-			"cornerRadii $ Corners ${7:0.0} ${8|true,false|}  ${9|true,false|}  ${10|true,false|}  ${11|true,false|}",
-		],
-		"description": "Corner Radii Prop PrestDom"
-	},
-	"Shadow": {
-		"prefix": "_sh",
-		"body": [
-			"shadow $ Shadow ${1:x} ${2:y} ${3:blur} ${4:spread} \"#${5:color}\" ${6:alpha}"
-		],
-		"description": "Shadow Prop PrestDom"
-	},
-	"Margin": {
-		"prefix": "_mg",
-		"body": [
-			"margin $ Margin ${1:left} ${2:top} ${3:right} ${4:bottom}"
-		],
-		"description": "Margin Prop PrestDom"
-	},
-	"Padding": {
-		"prefix": "_pd",
-		"body": [
-			"padding $ Padding ${1:left} ${2:top} ${3:right} ${4:bottom}"
-		],
-		"description": "Padding Prop PrestDom"
-	},
-	"Accessor": {
-		"prefix": "_acc",
-		"body": [
-			"_$0 :: forall a b c. Newtype a { $0 :: b | c } => Lens' a b",
-			"_$0 = lens (unwrap >>> _.$0) (\\oldRec newVal -> wrap ((unwrap oldRec) { $0 = newVal }))"
-		],
-		"description": "Accessor Lenses"
-	},
-	"Derive-Instance": {
-		"prefix": "_di",
-		"body": [
-			"derive instance newtype$0 :: Newtype $0 _",
-			"derive instance generic$0 :: Generic $0 _",
-			"instance encode$0 :: Encode $0 where encode = defaultEncode",
-			"instance decode$0 :: Decode $0 where decode = defaultDecode"
-		],
-		"description": "Derive Instance"
-	}
+  "LinearLayout": {
+    "prefix": "_ll",
+    "body": [
+      "linearLayout",
+      "\t[ height ${1|$ V 0,MATCH_PARENT,WRAP_CONTENT|}",
+      "\t, width ${2|$ V 0,MATCH_PARENT,WRAP_CONTENT|}",
+      "\t, orientation ${3|VERTICAL,HORIZONTAL|}",
+      "\t, margin $ Margin ${4:0 0 0 0}",
+      "\t, padding $ Padding ${5:0 0 0 0}",
+      "\t, background \"#${6:FFFFFF}\"",
+      "\t, cornerRadii $ Corners ${7:0.0} ${8|true,false|}  ${9|true,false|}  ${10|true,false|}  ${11|true,false|}",
+      "\t, gravity ${8|CENTER,CENTER_VERTICAL,CENTER_HORIZONTAL,LEFT,RIGHT|}",
+      "\t]",
+      "\t[ ",
+      "\t$0",
+      "\t]"
+    ],
+    "description": "LinearLayout PrestDom"
+  },
+  "RelativeLayout": {
+    "prefix": "_rl",
+    "body": [
+      "relativeLayout",
+      "\t[ height ${1|$ V 0,MATCH_PARENT|}",
+      "\t, width ${2|$ V 0,MATCH_PARENT|}",
+      "\t, background \"#${3:FFFFFF}\"",
+      "\t, cornerRadii $ Corners ${7:0.0} ${8|true,false|}  ${9|true,false|}  ${10|true,false|}  ${11|true,false|}",
+      "\t, gravity ${8|CENTER,CENTER_VERTICAL,CENTER_HORIZONTAL,LEFT,RIGHT|}",
+      "\t]",
+      "\t[ ",
+      "\t$0",
+      "\t]"
+    ],
+    "description": "RelativeLayout PrestDom"
+  },
+  "Weight-LinearLayout-Vertical": {
+    "prefix": "_llVW",
+    "body": [
+      "linearLayout",
+      "\t[ height $ V 1",
+      "\t, width MATCH_PARENT",
+      "\t, weight \"1\"",
+      "\t] []"
+    ],
+    "description": "Weight-LinearLayout-VERTICAL PrestDom"
+  },
+  "Weight-LinearLayout-Horizontal": {
+    "prefix": "_llHW",
+    "body": [
+      "linearLayout",
+      "\t[ height MATCH_PARENT",
+      "\t, width $ V 1",
+      "\t, weight \"1\"",
+      "\t] []"
+    ],
+    "description": "Weight-LinearLayout-HORIZONTAL PrestDom"
+  },
+  "TextView": {
+    "prefix": "_tv",
+    "body": [
+      "textView",
+      "\t[ height ${1:$ V 0}",
+      "\t, width ${2:$ V 0}",
+      "\t, text \"${3:Hello World}\"",
+      "\t, letterSpacing ${4:0.0}",
+      "\t, color \"#${5:000000}\"",
+      "\t, textSize ${6:12}",
+      "\t, fontStyle \"${7:Roboto-Regular}\"",
+      "\t, singleLine ${8:false}",
+      "\t]"
+    ],
+    "description": "TextView PrestDom"
+  },
+  "EditText": {
+    "prefix": "_et",
+    "body": [
+      "editText",
+      "\t[ height ${1:$ V 0}",
+      "\t, width ${2:$ V 0}",
+      "\t, hint \"${3:Hello World}\"",
+      "\t, hintColor \"#${4:000000}\"",
+      "\t, color \"#${5:000000}\"",
+      "\t, letterSpacing ${6:0.0}",
+      "\t, textSize ${7:12}",
+      "\t, fontStyle \"${8:Roboto-Regular}\"",
+      "\t, singleLine ${9:true}",
+      "\t, padding $ Padding 0 0 0 0",
+      "\t]"
+    ],
+    "description": "EditText PrestDom"
+  },
+  "ImageView": {
+    "prefix": "_iv",
+    "body": [
+      "imageView",
+      "\t[ height ${1:$ V 0}",
+      "\t, width ${2:$ V 0}",
+      "\t, imageUrl \"${3}\"",
+      "\t]"
+    ],
+    "description": "ImageView PrestDom"
+  },
+  "CornerRadii": {
+    "prefix": "_cr",
+    "body": [
+      "cornerRadii $ Corners ${1:0.0} ${2|true,false|}  ${3|true,false|}  ${4|true,false|}  ${5|true,false|}"
+    ],
+    "description": "Corner Radii Prop PrestDom"
+  },
+  "Shadow": {
+    "prefix": "_sh",
+    "body": [
+      "shadow $ Shadow ${1:x} ${2:y} ${3:blur} ${4:spread} \"#${5:color}\" ${6:alpha}"
+    ],
+    "description": "Shadow Prop PrestDom"
+  },
+  "Margin": {
+    "prefix": "_mg",
+    "body": ["margin $ Margin ${1:left} ${2:top} ${3:right} ${4:bottom}"],
+    "description": "Margin Prop PrestDom"
+  },
+  "Padding": {
+    "prefix": "_pd",
+    "body": ["padding $ Padding ${1:left} ${2:top} ${3:right} ${4:bottom}"],
+    "description": "Padding Prop PrestDom"
+  },
+  "Accessor": {
+    "prefix": "_acc",
+    "body": [
+      "_$0 :: forall a b c. Newtype a { $0 :: b | c } => Lens' a b",
+      "_$0 = lens (unwrap >>> _.$0) (\\oldRec newVal -> wrap ((unwrap oldRec) { $0 = newVal }))"
+    ],
+    "description": "Accessor Lenses"
+  },
+  "Derive-Instance": {
+    "prefix": "_di",
+    "body": [
+      "derive instance newtype$0 :: Newtype $0 _",
+      "derive instance generic$0 :: Generic $0 _",
+      "instance encode$0 :: Encode $0 where encode = defaultEncode",
+      "instance decode$0 :: Decode $0 where decode = defaultDecode"
+    ],
+    "description": "Derive Instance"
+  },
+  "New-Screen-Types": {
+    "prefix": "_screen:types",
+    "body": [
+      "-- Types -> The basic screen types for the screen",
+      "type State = { data :: Data, props :: Props }",
+      "",
+      "type Data = { action :: Boolean }",
+      "",
+      "type Props = { actionProp :: String }",
+      "",
+      "initialState :: State",
+      "initialState = { data: { action: false }, props: { actionProp: \"\" } }"
+    ],
+    "description": "The basic screen types for the screen with default values"
+  },
+  "New-Screen-View": {
+    "prefix": "_screen:view",
+    "body": [
+      "-- View -> The main screen call initializing initial actin and state with the screen",
+      "screen :: State -> ScopedScreen Action State ScreenOutput",
+      "screen initialState =",
+      "\t{ initialState",
+      "\t, view: view",
+      "\t, name: \"${1:screen_name}\"",
+      "\t, globalEvents: [ (\\push -> pure $ pure unit) ]",
+      "\t, parent: Just \"${2:parent_name}\"",
+      "\t, eval",
+      "\t}",
+      "\n",
+      "view :: forall w. (Action -> Effect Unit) -> State -> PrestoDOM (Effect Unit) w",
+      "view _push _state =",
+      "\tlinearLayout",
+      "\t [ height MATCH_PARENT",
+      "\t , width MATCH_PARENT",
+      "\t ]",
+      "\t [ textView",
+      "\t  [ height MATCH_PARENT",
+      "\t    , width MATCH_PARENT",
+      "\t    , text \"Hello World\"",
+      "\t    , textSize 14",
+      "\t    , fontStyle \"Roboto-Regular\"",
+      "\t    , singleLine false",
+      "\t  ]",
+      "\t]"
+    ],
+    "description": "The basic view of the screen using Presto Dom"
+  },
+  "New-Screen-Controller": {
+    "prefix": "_screen:controller",
+    "body": [
+      "-- Controller",
+      "-- All actions which can be performed on the screen. Sample click includes NextClick and BackClick.",
+      "-- P.S. This is not the actual logic for going to next screen or previous screen. This is just a example",
+      "-- for showing 2 kinds of exits from the screen.",
+      "data ScreenOutput = NextScreen State | Back State",
+      "",
+      "data Action = NextClick | BackClick",
+      "",
+      "instance showAction :: Show Action where",
+      "\tshow NextClick = \"NextClick\"",
+      "\tshow BackClick = \"BackClick\"",
+      "",
+      "instance loggableAction :: Loggable Action where",
+      "\tperformLog action appId = case action of",
+      "\t\tNextClick -> pure unit",
+      "\t\tBackClick -> pure unit",
+      "",
+      "eval :: Action -> State -> Eval Action ScreenOutput State",
+      "eval NextClick state = exit $ NextScreen state",
+      "eval BackClick state = exit $ Back state"
+    ],
+    "description": "All actions which can be performed on the screen. Sample click includes NextClick and BackClick.\nP.S. This is not the actual logic for going to next screen or previous screen. This is just a example for showing 2 kinds of exits from the screen."
+  },
+  "New-Screen": {
+    "prefix": "_screen",
+    "body": [
+      "import Prelude",
+      "import PrestoDOM",
+      "import Effect",
+      "import Data.Maybe",
+      "",
+      "-- Types -> The basic screen types for the screen",
+      "type State = { data :: Data, props :: Props }",
+      "",
+      "type Data = { action :: Boolean }",
+      "",
+      "type Props = { actionProp :: String }",
+      "",
+      "initialState :: State",
+      "initialState = { data: { action: false }, props: { actionProp: \"\" } }",
+      "",
+      "-- View -> The main screen call initializing initial actin and state with the screen",
+      "screen :: State -> ScopedScreen Action State ScreenOutput",
+      "screen initialState =",
+      "\t{ initialState",
+      "\t, view: view",
+      "\t, name: \"${1:screen_name}\"",
+      "\t, globalEvents: [ (\\push -> pure $ pure unit) ]",
+      "\t, parent: Just \"${2:parent_name}\"",
+      "\t, eval",
+      "\t}",
+      "\n",
+      "view :: forall w. (Action -> Effect Unit) -> State -> PrestoDOM (Effect Unit) w",
+      "view _push _state =",
+      "\tlinearLayout",
+      "\t [ height MATCH_PARENT",
+      "\t , width MATCH_PARENT",
+      "\t ]",
+      "\t [ textView",
+      "\t  [ height MATCH_PARENT",
+      "\t    , width MATCH_PARENT",
+      "\t    , text \"Hello World\"",
+      "\t    , textSize 14",
+      "\t    , fontStyle \"Roboto-Regular\"",
+      "\t    , singleLine false",
+      "\t  ]",
+      "\t]",
+      "",
+      "-- Controller",
+      "-- All actions which can be performed on the screen. Sample click includes NextClick and BackClick.",
+      "-- P.S. This is not the actual logic for going to next screen or previous screen. This is just a example",
+      "-- for showing 2 kinds of exits from the screen.",
+      "data ScreenOutput = NextScreen State | Back State",
+      "",
+      "data Action = NextClick | BackClick",
+      "",
+      "instance showAction :: Show Action where",
+      "\tshow NextClick = \"NextClick\"",
+      "\tshow BackClick = \"BackClick\"",
+      "",
+      "instance loggableAction :: Loggable Action where",
+      "\tperformLog action appId = case action of",
+      "\t\tNextClick -> pure unit",
+      "\t\tBackClick -> pure unit",
+      "",
+      "eval :: Action -> State -> Eval Action ScreenOutput State",
+      "eval NextClick state = exit $ NextScreen state",
+      "eval BackClick state = exit $ Back state"
+    ],
+    "description": "The basic screen code with types, views and controllers. You might want to separate this into different files"
+  }
 }
