@@ -3,7 +3,7 @@
     "displayName": "Purescript PrestoDom Snippets",
     "description": "Code Snippets for PrestDom in PureScript Syntax",
     "publisher": "ShreyansJain",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "icon": "assets/purescript.png",
     "author": {
         "name": "Shreyans Jain",
