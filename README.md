@@ -1,8 +1,8 @@
 # Purescript PrestoDom Snippets &nbsp; 
+Collection of useful PrestoDom snippets in PureScript Syntax for writing code quickly
 
-<!-- ![Downloads](https://marketplace.visualstudio.com/items?itemName=ShreyansJain.purescript-prestodom-snippets) -->
+[🔥 Live Version](https://marketplace.visualstudio.com/items?itemName=ShreyansJain.purescript-prestodom-snippets#overview)
 
-Code Snippets for PrestDom in PureScript Syntax
 
 <img src="assets/PrestoDom.gif" width="800" />
 

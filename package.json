@@ -1,7 +1,7 @@
 {
     "name": "purescript-prestodom-snippets",
     "displayName": "Purescript PrestoDom Snippets",
-    "description": "Code Snippets for PrestDom in PureScript Syntax",
+    "description": "Collection of useful PrestoDom snippets in PureScript Syntax for writing code quickly.",
     "publisher": "ShreyansJain",
     "version": "1.2.0",
     "icon": "assets/purescript.png",
@@ -22,7 +22,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/Shreyans13/vsce-presto-dom.git"
+        "url": "https://github.com/Shreyans13/Purescript-PrestoDom-Snippets.git"
     },
     "license": "MIT",
     "private": false,
